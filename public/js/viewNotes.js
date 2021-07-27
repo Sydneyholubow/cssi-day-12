@@ -3,7 +3,7 @@ window.onload = event => {
         if (user) {
             console.log("signed in as " + user.displayName)
             const googleUserId = user.uid;
-            getNotes
+            getNotes(user.uid)
         } else {
             window.location - "index.html";
   }
@@ -14,6 +14,7 @@ const getNotes = (userId) => {
     const notesRef = firebase.database().ref(`users/${userId}`);
     notesRef.on('value', (snapshot) => {
         const data = snapshot.val();
+        renderDataAsHtml(data);
     })
 }
 
