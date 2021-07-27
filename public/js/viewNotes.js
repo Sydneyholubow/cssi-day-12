@@ -34,6 +34,7 @@ const createCard = (note) => {
             <div class="card">
                 <header class="card-header">
                     <p class="card-header-title">${note.title}</p>
+                    <p class="card-header-title">userId</p>
                 </header>
                 <div class="card-content">
                         <div class="content">${note.text}</div>
@@ -42,3 +43,4 @@ const createCard = (note) => {
         </div>
     `;
 }
+
